@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Life iS KEKW">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around_small">
+                <lightning-input label="Input Name" onchange={updateNameInput}></lightning-input>
+                <lightning-button label="Submit" onclick={submitContact}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout-item size="6" padding="around_small">
+            <lightning-card title="View account record">
+                <p><lightning-formatted-text value={getAccountx} ></lightning-formatted-text></p>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-card>
+</template>

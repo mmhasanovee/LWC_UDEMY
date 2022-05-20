@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Simpson Calculator" icon-name="standard:formula">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" name="firstNumber" onchange={inputChangeHandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" name="secondNumber" onchange={inputChangeHandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-button-group>
+                    <lightning-button label="Addition" onclick={computation} data-name="add"></lightning-button>
+                    <lightning-button label="Subtraction" onclick={computation} data-name="sub"></lightning-button>
+                    <lightning-button label="Division" onclick={computation} data-name="div"></lightning-button>
+                    <lightning-button label="Multiply" onclick={computation} data-name="mul"></lightning-button>
+                    <lightning-button label="Mod" onclick={computation} data-name="mod"></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-formatted-text value={outputResult}></lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+    <p>Dummy output is: {dummyOutput} {outputResult}</p>
+</template>

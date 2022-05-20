@@ -1,0 +1,9 @@
+<template>
+    <ul>
+        <template for:each={name} for:item="person">
+            <li key={person.label}>
+                <c-maria-child life-is-kekw={person.label}></c-maria-child>
+            </li>
+        </template>
+    </ul>
+</template>
