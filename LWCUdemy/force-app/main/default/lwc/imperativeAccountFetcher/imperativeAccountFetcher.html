@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <lightning-tile>
+            <template for:each={allAccounts} for:item="kekw">
+                <li key={kekw.Id}>
+                    <p>Account Nam, ID is {kekw.Name} {kekw.Id}</p>
+                </li>
+            </template>
+        </lightning-tile>
+    </lightning-card>
+    
+    
+    
+    <lightning-input label="Please enter the number of records you want to see" onchange={updateEntry}></lightning-input>
+    <lightning-button label="Get Accounts" onclick={getAccounts}></lightning-button>
+</template>
